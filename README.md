@@ -1,223 +1,153 @@
-#SportyGPT — AI Powered Sports Intelligence Platform
+# 🌌 ＳＰＯＲＴＹＧＰＴ
+✦ ── 「 Your Personal ChatGPT Clone Powered by AI 」── ✦
+<div align="center">
+<img src="https://img.shields.io/badge/Spring%20AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>  
+<img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white"/>  
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>  
+<img src="https://img.shields.io/badge/Spring%20Boot-000000?style=for-the-badge&logo=springboot&logoColor=6DB33F"/>  
+🚀 Intelligent Conversations • ⚡ Lightning Fast APIs • 🧠 AI Powered Responses
 
-Your personal AI sports companion built with Spring AI, delivering real-time sports conversations, predictions, insights, and analytics with the power of LLMs.
+✨ A modern ChatGPT-inspired AI assistant built using Spring AI & OpenAI APIs
+</div>
 
+🧠 ❖ About SportyGPT
 
-🚀 Overview
-SportyGPT is a modern AI-driven sports platform built using Spring Boot + Spring AI that enables users to interact with sports data in a conversational way.
-From match summaries and player stats to AI-generated predictions and smart sports discussions — SportyGPT brings the future of sports engagement into one platform.
-Whether you're a football fanatic, cricket analyst, fantasy league player, or casual sports lover, SportyGPT delivers intelligent responses powered by Large Language Models.
+💡 SportyGPT is a powerful AI chatbot platform inspired by ChatGPT and engineered using Spring AI with OpenAI GPT models.
 
-✨ Features
-🤖 AI Sports Chat
+It delivers:
 
 
-Ask anything about sports naturally
+💬 Human-like AI conversations
 
 
-AI-powered responses using Spring AI
+⚡ Fast and scalable backend APIs
 
 
-Context-aware conversations
+🧠 Intelligent contextual responses
 
 
-📊 Match Insights
+🔥 Modern Spring Boot architecture
 
 
-Live match summaries
+🎨 Beautiful frontend-ready integration
 
 
-Team performance analysis
+SportyGPT demonstrates how developers can build their own production-ready AI assistant using the Java + Spring ecosystem.
 
+✨ ❖ Features
+🤖 AI Chat Engine
+✦ Real-time conversations
+✦ Context-aware AI responses
+✦ Human-like interactions
+✦ ChatGPT-inspired experience
 
-Win probability discussions
+⚡ Spring AI Integration
+✦ OpenAI GPT integration
+✦ Prompt engineering support
+✦ AI service abstraction
+✦ Clean Spring ecosystem support
 
+🏗️ Enterprise Backend
+✦ Spring Boot 3 architecture
+✦ Layered clean code structure
+✦ RESTful APIs
+✦ Scalable production-ready design
 
-Tactical breakdowns
+🔐 Authentication & Security
+✦ JWT Authentication
+✦ Secure endpoints
+✦ Role-based access
+✦ API protection
 
+🎨 Frontend Ready
+✦ React / Next.js compatible
+✦ Tailwind CSS support
+✦ Modern chat UI
+✦ Responsive experience
 
-🧠 AI Predictions
+🛠️ ❖ Tech Stack
+⚙️ Technology🚀 Purpose☕ Java 21Core Backend🍃 Spring Boot 3Backend Framework🧠 Spring AIAI Integration🤖 OpenAI GPTConversational AI🗄️ MySQL / PostgreSQLDatabase🔑 JWTSecurity⚛️ React / Next.jsFrontend🎨 Tailwind CSSUI Design
 
+🏗️ ❖ Architecture Flow
+👤 User   ↓💻 Frontend UI   ↓⚡ Spring Boot APIs   ↓🧠 Spring AI   ↓🤖 OpenAI GPT Models
 
-Match outcome predictions
+📂 ❖ Project Structure
+sportygpt/│├── backend/│   ├── 🎮 controller/│   ├── ⚙️ service/│   ├── 🗄️ repository/│   ├── 🔐 security/│   ├── 🧠 ai/│   ├── 📦 dto/│   └── 🛠️ config/│├── frontend/│   ├── 🎨 components/│   ├── 📄 pages/│   ├── 🔌 services/│   └── 🧩 utils/│└── README.md
 
-
-Player performance expectations
-
-
-Fantasy sports suggestions
-
-
-⚡ Real-Time Experience
-
-
-Fast Spring Boot backend
-
-
-REST APIs for scalability
-
-
-Reactive and modern architecture
-
-
-🔐 Secure Backend
-
-
-JWT Authentication
-
-
-Role-based access
-
-
-Protected endpoints
-
-
-🌍 Multi-Sport Support
-
-
-Cricket
-
-
-Football
-
-
-Basketball
-
-
-Tennis
-
-
-More coming soon...
-
-
-
-🛠️ Tech Stack
-TechnologyPurposeJava 21Backend LanguageSpring Boot 3Backend FrameworkSpring AIAI IntegrationOpenAI / GeminiLLM ProviderMavenDependency ManagementMySQL / PostgreSQLDatabaseJWTAuthenticationReact / Next.jsFrontendTailwind CSSUI Styling
-
-🧠 Spring AI Integration
-SportyGPT leverages Spring AI to integrate powerful AI capabilities directly into the Spring ecosystem.
-Supported AI Features
-
-
-Prompt Engineering
-
-
-Chat Completion
-
-
-AI Service Layer
-
-
-Structured Responses
-
-
-Memory & Context Handling
-
-
-AI-powered REST APIs
-
-
-
-📂 Project Structure
-sportygpt/│├── backend/│   ├── controller/│   ├── service/│   ├── repository/│   ├── security/│   ├── ai/│   └── config/│├── frontend/│   ├── components/│   ├── pages/│   ├── services/│   └── utils/│└── README.md
-
-⚙️ Getting Started
-1️⃣ Clone Repository
+⚙️ ❖ Installation
+📥 Clone Repository
 git clone https://github.com/yourusername/sportygpt.gitcd sportygpt
 
-2️⃣ Configure Environment Variables
-Create an .env file:
-OPENAI_API_KEY=your_api_keyDB_URL=jdbc:mysql://localhost:3306/sportygptDB_USERNAME=rootDB_PASSWORD=passwordJWT_SECRET=your_secret
+🔑 Configure Environment Variables
+OPENAI_API_KEY=your_api_keyDB_URL=jdbc:mysql://localhost:3306/sportygptDB_USERNAME=rootDB_PASSWORD=passwordJWT_SECRET=your_secret_key
 
-3️⃣ Run Backend
+🚀 Run Backend
 cd backendmvn spring-boot:run
-Backend runs on:
+🌐 Backend:
 http://localhost:8080
 
-4️⃣ Run Frontend
+💻 Run Frontend
 cd frontendnpm installnpm run dev
-Frontend runs on:
+🌐 Frontend:
 http://localhost:3000
 
-🔥 Example AI Prompt
-Who has a better chance of winning today’s match between India and Australia?
-AI Response
-Based on current form, bowling depth, and recent head-to-head statistics,India appears to have a slight advantage in today's match.
+💬 ❖ Example Conversation
+👤 User
+What is Spring AI?
+🤖 SportyGPT
+Spring AI is a framework that helps developers integrate AI models like OpenAI into Spring Boot applications easily and efficiently.
 
-📡 API Endpoints
-MethodEndpointDescriptionPOST/api/chatAI Sports ChatGET/api/matchesLive MatchesGET/api/teamsTeams DataGET/api/playersPlayer StatisticsPOST/api/predictMatch Prediction
+🧠 ❖ Spring AI Example
+@RestController@RequiredArgsConstructorpublic class ChatController {    private final ChatClient chatClient;    @PostMapping("/api/chat")    public String chat(@RequestBody String message) {        return chatClient.prompt()                .user(message)                .call()                .content();    }}
 
-🔐 Authentication
-SportyGPT uses JWT authentication.
-Features
+📡 ❖ API Endpoints
+🚀 Method🔗 Endpoint📖 DescriptionPOST/api/chatAI Chat EndpointPOST/api/auth/loginUser LoginPOST/api/auth/registerUser RegistrationGET/api/user/profileUser Profile
 
+🌟 ❖ Why SportyGPT?
+Because AI applications should feel:
+✨ Intelligent
+⚡ Fast
+🧠 Modern
+🚀 Scalable
+🎨 Beautiful
+SportyGPT is a complete example of how to build your own ChatGPT-like platform using Java and Spring AI.
 
-User Signup/Login
+🔮 ❖ Future Enhancements
+✦ 🎙️ Voice Assistant
+✦ 🧠 AI Memory Support
+✦ 🌐 Multi-language AI
+✦ 📂 Chat History
+✦ ⚡ Streaming Responses
+✦ 📱 Mobile Application
+✦ 🖼️ AI Image Generation
 
+🤝 ❖ Contributing
+🍴 Fork → 🛠️ Develop → 🚀 Push → 🔥 Pull Request
 
-Token-based authentication
-
-
-Secure APIs
-
-
-Role-based authorization
-
-
-
-🖼️ Future Enhancements
-
-
-🎙️ Voice AI Sports Assistant
-
-
-📺 Live Commentary Generation
-
-
-🧠 Fantasy Team Generator
-
-
-📈 AI Betting Analytics
-
-
-🏟️ Real-Time Match Streaming Integration
-
-
-🌐 Multi-language Support
-
-
-
-🤝 Contributing
-Contributions are welcome!
-Fork → Clone → Create Branch → Commit → Push → Pull Request
-
-⭐ Why SportyGPT?
-Because sports are emotional.
-And AI makes them intelligent.
-SportyGPT combines:
-
-
-Modern AI
-
-
-Scalable backend engineering
-
-
-Real-time sports engagement
-
-
-Conversational user experience
-
-
-into one powerful platform.
-
-📜 License
-This project is licensed under the MIT License.
-
-👨‍💻 Author
-Built with ❤️ using Java, Spring Boot & AI.
-🌟 Show Your Support
+⭐ ❖ Show Your Support
 If you like this project:
 ⭐ Star the repository
-🍴 Fork it
-🧠 Build something amazing with AI & Sports
+🍴 Fork the project
+🚀 Build amazing AI apps
+🧠 Explore Spring AI
+
+👨‍💻 ❖ Built With Love Using
+
+
+Spring AI
+
+
+Spring Boot
+
+
+OpenAI
+
+
+Java
+
+
+
+<div align="center">
+🚀 「 ＳＰＯＲＴＹＧＰＴ 」
+✨ Build Your Own ChatGPT with Spring AI & OpenAI ✨
+</div>
