@@ -1,4 +1,4 @@
-SportyGPT — AI Powered Sports Intelligence Platform
+#SportyGPT — AI Powered Sports Intelligence Platform
 
 Your personal AI sports companion built with Spring AI, delivering real-time sports conversations, predictions, insights, and analytics with the power of LLMs.
 
