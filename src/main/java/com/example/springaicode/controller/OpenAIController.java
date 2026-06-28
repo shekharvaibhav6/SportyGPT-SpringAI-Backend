@@ -1,5 +1,5 @@
 package com.example.springaicode.controller;
-
+import org.springframework.ai.reader.pdf.PagePdfDocumentReader;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
 import org.springframework.ai.vectorstore.SearchRequest;
@@ -20,6 +20,9 @@ import org.springframework.ai.document.Document;
 import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 import java.util.Map;
+import java.io.IOException;
+import org.springframework.ai.reader.TextReader;
+import org.springframework.core.io.ByteArrayResource;
 
 @RestController
 public class OpenAIController {
@@ -101,17 +104,54 @@ public class OpenAIController {
 
 
     }
-    @PostMapping("/api/ask")
-    public String getAnswerUsingRag(@RequestParam String query) {
-        return chatClient
-                .prompt(query)
-                .advisors(QuestionAnswerAdvisor.builder(vectorStore).build())
+    @PostMapping("/api/chat")
+    public ResponseEntity<String> chat(
+            @RequestParam(required = false) String message,
+            @RequestParam(required = false) MultipartFile file) throws IOException {
+
+        // If a file is uploaded, read it and store it in the vector store
+        if (file != null && !file.isEmpty()) {
+
+            String fileName = file.getOriginalFilename();
+
+            List<Document> documents;
+
+            if (fileName.endsWith(".txt")) {
+
+                TextReader reader = new TextReader(
+                        new ByteArrayResource(file.getBytes()));
+
+                documents = reader.get();
+
+            } else if (fileName.endsWith(".pdf")) {
+
+                PagePdfDocumentReader reader =
+                        new PagePdfDocumentReader(file.getResource());
+
+                documents = reader.get();
+
+            } else {
+
+                return ResponseEntity.badRequest()
+                        .body("Only TXT and PDF files are supported.");
+
+            }
+
+            vectorStore.add(documents);
+
+            return ResponseEntity.ok(
+                    "File uploaded successfully. Now ask questions about it.");
+        }
+
+        // No file uploaded → answer using RAG
+        String response = chatClient
+                .prompt(message)
+                .advisors(
+                        QuestionAnswerAdvisor.builder(vectorStore).build()
+                )
                 .call()
                 .content();
-    }
-    @PostMapping("image/describe")
-    public String descImage(@RequestParam String query, @RequestParam MultipartFile file){
-        return chatClient.prompt().user(us->us.text(query).media(MimeTypeUtils.IMAGE_JPEG,file.getResource())).call().content();
 
+        return ResponseEntity.ok(response);
     }
 }
